@@ -14,3 +14,11 @@ services:
       - MYSQL_ROOT_HOST= %
     volumes:
       - ./data:/var/lib/mysql
+      
+  catalogservice:
+    image: mm/ecom-catalogs
+    container_name: "ecom-catalogs"
+    ports:
+      - '8180:8080'
+    depends_on:
+      - mysqldb
