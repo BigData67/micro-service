@@ -12,6 +12,13 @@
  - Update application.properties
  - cd to ecom-catalogs and execute : ./mvnw install dockerfile:build
  - docker-compose up
- - dans un navigateur http://localhost:8080/categories
+ - dans un navigateur http://localhost:8180/categories
+ 
+ 
+## Adding swagger
+ - Adding swagger dependency in pom.xml
+ - Adding SwaggerConfig
+ - Update ecom-catalogs from 8180 -> 8080 in docker-compose
+ - Test with : http://localhost:8080/swagger-ui.html
  
  

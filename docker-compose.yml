@@ -19,6 +19,6 @@ services:
     image: mm/ecom-catalogs
     container_name: "ecom-catalogs"
     ports:
-      - '8180:8080'
+      - '8080:8080'
     depends_on:
       - mysqldb
