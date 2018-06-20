@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  mysqldb:
+    image: mysql:5.7
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=test
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=dbp4ss
+      - MYSQL_ROOT_HOST= %
+    volumes:
+      - ./data:/var/lib/mysql
