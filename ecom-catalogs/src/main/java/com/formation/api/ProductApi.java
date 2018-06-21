@@ -3,6 +3,7 @@ package com.formation.api;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,6 +20,7 @@ import com.formation.entities.Product;
 
 @RestController
 @RequestMapping("/products")
+@EnableEurekaClient
 public class ProductApi {
 	
 	protected Logger logger = Logger.getLogger(ProductApi.class.getName());

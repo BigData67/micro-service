@@ -22,3 +22,10 @@ services:
       - '8080:8080'
     depends_on:
       - mysqldb
+      - eureka-server
+      
+  eureka-server:
+    image: mm/ecom-registry
+    container_name: "server-registry"
+    ports:
+     - "8761:8761"

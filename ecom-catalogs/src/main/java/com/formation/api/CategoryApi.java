@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,7 @@ import com.formation.dao.CategoryRepository;
 import com.formation.entities.Category;
 
 @RestController
+@EnableEurekaClient
 public class CategoryApi {
 
 	protected Logger logger = Logger.getLogger(CategoryApi.class.getName());

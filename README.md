@@ -21,4 +21,15 @@
  - Update ecom-catalogs from 8180 -> 8080 in docker-compose
  - Test with : http://localhost:8080/swagger-ui.html
  
+## Adding Eureka
+ - Create ecom-registry project
+ - Adding dependency listed in pom.xml from ecom-registry
+ - Adding @EnableEurekaServer to Application.java from ecom-registry
+ - Setting eureka.client.service-url.defaultZone to application.properties from ecom-registry
+ - Add Dockerfile to ecom-registry
+ - Edit pom.xml from ecom-catalogs
+ 	o Add spring-cloud-starter-eureka
+ - Edit CategoryApi and ProductApi from ecom-service
+ 	o Adding @EnableEurekaClient on both 
+ - Update docker-compose and link all
  
