@@ -1,0 +1,15 @@
+zuul:
+  prefix: /api
+  routes:
+    catalogs: 
+      path: /cat/**
+      serviceId: catalogs-service       
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
+    registerWithEureka: false
+      
+server:
+  port: 8080

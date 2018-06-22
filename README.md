@@ -33,3 +33,13 @@
  	o Adding @EnableEurekaClient on both 
  - Update docker-compose and link all
  
+## Adding Zuul
+ - Creating ecom-gateway project
+ - Configure pom.xml of ecom-gateway
+ - Configure routing in application.yml
+ - Adding @EnableZuulProxy to Application.java
+ - Build image with the commande ./mvnw install dockerfile:build
+ - Configure project in docker-compose.yml
+ - Test dans un navigateur http://localhost:9000/api/cat/categories
+ 
+ 

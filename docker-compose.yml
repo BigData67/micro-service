@@ -29,3 +29,11 @@ services:
     container_name: "server-registry"
     ports:
      - "8761:8761"
+     
+  gateway:
+    image: mm/ecom-gateway
+    container_name: "server-gateway"
+    links:
+      - eureka-server
+    ports:
+      - "9000:8080"
